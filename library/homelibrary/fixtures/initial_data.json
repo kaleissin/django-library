@@ -1,0 +1,230 @@
+[
+  {
+    "pk": 4, 
+    "model": "library.location", 
+    "fields": {
+      "modified": "2013-02-19T11:06:29.076Z", 
+      "name": "Kitchen", 
+      "created": "2013-02-19T11:06:29.076Z"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "library.location", 
+    "fields": {
+      "modified": "2013-02-19T10:59:19.377Z", 
+      "name": "Living room, big shelf, third from top, outer layer", 
+      "created": "2013-02-19T10:59:19.377Z"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "library.location", 
+    "fields": {
+      "modified": "2013-02-19T11:01:02.812Z", 
+      "name": "Living room, food&drink shelf, top", 
+      "created": "2013-02-19T11:01:02.812Z"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "library.location", 
+    "fields": {
+      "modified": "2013-02-19T10:47:24.232Z", 
+      "name": "Living room, leftmost, top shelf ", 
+      "created": "2013-02-19T10:47:24.232Z"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T10:48:15.908Z", 
+      "name": "Alex Martelli", 
+      "created": "2013-02-19T10:48:15.908Z"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T11:08:25.740Z", 
+      "name": "Donald E. Knuth", 
+      "created": "2013-02-19T11:08:25.740Z"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T11:14:30.978Z", 
+      "name": "George V. Neville-Neil", 
+      "created": "2013-02-19T11:14:30.978Z"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T11:05:24.660Z", 
+      "name": "Jeff Potter", 
+      "created": "2013-02-19T11:05:24.660Z"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T10:58:25.346Z", 
+      "name": "John Scalzi", 
+      "created": "2013-02-19T10:58:25.346Z"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T11:13:56.480Z", 
+      "name": "Marshall Kirk McKusick", 
+      "created": "2013-02-19T11:13:56.480Z"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T10:46:39.153Z", 
+      "name": "Marty Alchin", 
+      "created": "2013-02-19T10:46:39.153Z"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "library.author", 
+    "fields": {
+      "modified": "2013-02-19T11:00:18.609Z", 
+      "name": "Tim Webb", 
+      "created": "2013-02-19T11:00:18.609Z"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "Python cookbook", 
+      "created": "2013-02-19T10:48:42.227Z", 
+      "modified": "2013-02-19T10:48:42.227Z", 
+      "sortkey": "Alex Martelli", 
+      "location": 1, 
+      "authors": [
+        2
+      ], 
+      "year_published": "2008-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "The Art of Computer Programming, Volumes 1-3 Boxed Set (3rd Edition) (Vol 1-3)", 
+      "created": "2013-02-19T11:09:36.939Z", 
+      "modified": "2013-02-19T11:09:36.939Z", 
+      "sortkey": "Donald E. Knuth", 
+      "location": 1, 
+      "authors": [
+        6
+      ], 
+      "year_published": "1998-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "Cooking for Geeks: Real Science, Great Hacks, and Good Food", 
+      "created": "2013-02-19T11:05:44.103Z", 
+      "modified": "2013-02-19T11:05:44.103Z", 
+      "sortkey": "Jeff Potter", 
+      "location": 4, 
+      "authors": [
+        5
+      ], 
+      "year_published": "2010-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "Redshirts: A Novel with Three Codas", 
+      "created": "2013-02-19T10:59:57.696Z", 
+      "modified": "2013-02-19T10:59:57.696Z", 
+      "sortkey": "John Scalzi", 
+      "location": 2, 
+      "authors": [
+        3
+      ], 
+      "year_published": "2012-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "The Design and Implementation of the FreeBSD Operating System ", 
+      "created": "2013-02-19T11:14:18.983Z", 
+      "modified": "2013-02-19T11:14:18.983Z", 
+      "sortkey": "Marshall Kirk McKusick, George V. Neville-Neil", 
+      "location": 3, 
+      "authors": [
+        8, 
+        7
+      ], 
+      "year_published": "2004-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "Pro Django (Expert's Voice in Web Development)", 
+      "created": "2013-02-19T10:47:35.378Z", 
+      "modified": "2013-02-19T10:47:35.378Z", 
+      "sortkey": "Marty Alchin", 
+      "location": 1, 
+      "authors": [
+        1
+      ], 
+      "year_published": "2008-01-01", 
+      "origkey": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "library.book", 
+    "fields": {
+      "comment": "", 
+      "title": "LambicLand: A Journey Round the Most Unusual Beers in the World", 
+      "created": "2013-02-19T11:01:23.534Z", 
+      "modified": "2013-02-19T11:01:23.534Z", 
+      "sortkey": "Tim Webb", 
+      "location": 3, 
+      "authors": [
+        4
+      ], 
+      "year_published": "2010-01-01", 
+      "origkey": ""
+    }
+  } 
+]
