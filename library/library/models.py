@@ -43,6 +43,10 @@ class Book(TimeStampedModel):
     def __unicode__(self):
         return u'%s (%s): "%s"' % (self.sortkey, self.year_published, self.title) 
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('book_detail', (), {'pk': self.pk})
+
     def display_authors(self):
         if self.sortkey:
             return self.sortkey

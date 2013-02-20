@@ -1,0 +1,12 @@
+{% extends "library/base.html" %}
+{% load url from future %}
+
+{% block content %}
+
+<h2>Are you sure you want to delete "{{ object.title }}"?</h2>
+<form action="." method="post">
+ {% csrf_token %}
+<input type="submit" value="Delete" />
+<p><a href="{% url 'book_detail' pk=object.pk %}">Nope</a></p>
+</form>
+{% endblock content %}
