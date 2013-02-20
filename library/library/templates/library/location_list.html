@@ -1,0 +1,12 @@
+{% extends "library/base.html" %}
+{% load url from future %}
+
+{% block content %}
+<table>
+{% for location in object_list %}
+<tr>
+<td><a href="{% url 'location_detail' pk=location.pk %}">{{ location.name }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}

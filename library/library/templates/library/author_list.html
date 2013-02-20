@@ -1,0 +1,12 @@
+{% extends "library/base.html" %}
+{% load url from future %}
+
+{% block content %}
+<table>
+{% for author in object_list %}
+<tr>
+<td><a href="{% url 'author_detail' pk=author.pk %}">{{ author.name }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}

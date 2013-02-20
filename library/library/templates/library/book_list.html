@@ -1,0 +1,15 @@
+{% extends "library/base.html" %}
+{% load url from future %}
+
+{% block content %}
+<table>
+{% for book in object_list %}
+<tr>
+<td><a href="{% url 'book_detail' pk=book.pk %}">{{ book.title }}</a></td>
+<td>{{ book.sortkey }}</td>
+<td>{{ book.year_published|date:"Y" }}</td>
+<td><a href="{% url 'location_detail' pk=book.location.pk %}">{{ book.location }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}
