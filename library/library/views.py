@@ -1,9 +1,21 @@
 from django.views.generic import ListView, DetailView
+from django.views.generic import YearArchiveView
 
 from .models import Book, Author, Location
 
 class BookListView(ListView):
     model = Book
+
+class YearListView(ListView):
+    queryset = Book.objects.order_by('year_published')
+
+class ChangedBookListView(ListView):
+    queryset = Book.objects.order_by('-modified')[:10]
+    template_name = 'library/book_list_with_dates.html'
+
+class NewBookListView(ListView):
+    queryset = Book.objects.order_by('-created')[:10]
+    template_name = 'library/book_list_with_dates.html'
 
 class BookDetailView(DetailView):
     model = Book
@@ -19,3 +31,11 @@ class LocationListView(ListView):
 
 class LocationDetailView(DetailView):
     model = Location
+
+
+class YearDetailView(YearArchiveView):
+    queryset = Book.objects.all()
+    allow_empty = True 
+    allow_future = True
+    date_field = 'year_published'
+    make_object_list = True
