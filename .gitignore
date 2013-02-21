@@ -1,0 +1,8 @@
+*.py[co]
+*.egg*
+*.swp
+*~
+build
+*.db
+*.log
+*.bak
