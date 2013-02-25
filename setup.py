@@ -1,5 +1,10 @@
 from setuptools import setup
 
+DJANGO_VERSION = "Django >= 1.5c1"
+tests_require = [
+        DJANGO_VERSION,
+]
+
 setup(
     name = 'django-library',
     version = '0.1',
@@ -17,9 +22,13 @@ setup(
     ],
     license = 'MIT',
     url = 'https://github.com/kaleissin/django-library',
-    download_url = 'https://github.com/kaleissin/django-librardjango-library/tarball/0.1',
+    download_url = 'https://github.com/kaleissin/django-library/tarball/0.1#egg=django-library-0.1',
 
     package_dir = {'': 'src',},
     packages = ['library'],
     include_package_data = True,
+
+    install_requires = [DJANGO_VERSION],
+    tests_require = tests_require,
+    dependency_links = ['https://www.djangoproject.com/download/1.5c1/tarball/#egg=Django-1.5c1'],
 )
