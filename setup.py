@@ -7,7 +7,7 @@ tests_require = [
 
 setup(
     name = 'django-library',
-    version = '0.1',
+    version = '0.2',
     author = 'kaleissin',
     author_email = 'kaleissin@gmail.com',
     description = ('A django app for keeping score on '
@@ -22,7 +22,7 @@ setup(
     ],
     license = 'MIT',
     url = 'https://github.com/kaleissin/django-library',
-    download_url = 'https://github.com/kaleissin/django-library/tarball/0.1#egg=django-library-0.1',
+    download_url = 'https://github.com/kaleissin/django-library/tarball/0.2#egg=django-library-0.2',
 
     package_dir = {'': 'src',},
     packages = ['library'],

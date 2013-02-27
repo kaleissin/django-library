@@ -6,6 +6,8 @@ from .views import *
 urlpatterns = patterns('',
     url(r'^$', BookListView.as_view(), name='library_home'),
 
+    url(r'^search$', SearchView.as_view(), name='library_search'),
+
     url(r'^book/$', BookListView.as_view(), name='book_list'),
     url(r'^book/create/$', BookCreateView.as_view(), name='book_create'),
     url(r'^book/(?P<pk>\d+)/update/$', BookUpdateView.as_view(), name='book_update'),
