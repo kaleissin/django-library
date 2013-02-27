@@ -1,0 +1,17 @@
+{% extends "library/base.html" %}
+{% load url from future %}
+
+{% block content %}
+<h2>Your search for "{{ query }}" returned {{ object_list.count }}
+results</h2>
+<table>
+{% for book in object_list %}
+<tr>
+<td><a href="{% url 'book_detail' pk=book.pk %}">{{ book.title }}</a></td>
+<td>{{ book.sortkey }}</td>
+<td><a href="{% url 'year_detail' year=book.year_published|date:"Y" %}">{{ book.year_published|date:"Y" }}</a></td>
+<td><a href="{% url 'location_detail' pk=book.location.pk %}">{{ book.location }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}
