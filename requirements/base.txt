@@ -1,4 +1,4 @@
-https://www.djangoproject.com/download/1.5c1/tarball/
+Django>=1.5
 South==0.7.6
 argparse==1.2.1
 distribute==0.6.24

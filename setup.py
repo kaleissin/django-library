@@ -1,6 +1,6 @@
 from setuptools import setup
 
-DJANGO_VERSION = "Django >= 1.5c1"
+DJANGO_VERSION = "Django >= 1.5"
 tests_require = [
         DJANGO_VERSION,
 ]
@@ -30,5 +30,4 @@ setup(
 
     install_requires = [DJANGO_VERSION],
     tests_require = tests_require,
-    dependency_links = ['https://www.djangoproject.com/download/1.5c1/tarball/#egg=Django-1.5c1'],
 )
