@@ -46,7 +46,12 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 
 ########## DATABASE CONFIGURATION
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'homelibrary-test.sqlite3',
+    }
+}
 ########## END DATABASE CONFIGURATION
 
 
