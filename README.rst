@@ -22,3 +22,27 @@ For production::
 
     $ pip install -r requirements.txt
 
+Using the app
+=============
+
+Pop the ``library`` directory into your python path, for instance with
+pip: "pip install django-library". Then append "library" to your
+INSTALLED_APPS. The included templates look for a template "base.html",
+see the one in homelibrary/templates for an example.
+
+Run south to add tables:
+
+    $ ./manage.py migrate library
+
+Test driving the example project
+================================
+
+Download the entire "django-library" directory somehow, set up a
+virtualenv with django (not tested with Django 1.6 yet),
+activate the virtualenv and run:
+
+    $ export SECRET_KEY='foo'
+    $ make cmd CMD="migrate library"
+    $ make cmd CMD=runserver
+
+... and hop on over to http://127.0.0.1/admin to play around.
