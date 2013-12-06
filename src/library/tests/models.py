@@ -8,7 +8,7 @@ from library.models import Book, Author, Location
 def diff_models(model1, model2, excludes=()):
     changes = {}
     for field in model1._meta.fields:
-        if not (isinstance(field, (fields.AutoField, fields.related.RelatedField)) 
+        if not (isinstance(field, (fields.AutoField, fields.related.RelatedField))
                 or field.name in excludes):
             if field.value_from_object(model1) != field.value_from_object(model2):
                 changes[field.verbose_name] = (field.value_from_object(model1),
@@ -22,8 +22,8 @@ class BookFromDictTestCase(TestCase):
 
     def setUp(self):
         testbook1 = Book.objects.create(
-                title='Test 1', 
-                sortkey='Author 1', 
+                title='Test 1',
+                sortkey='Author 1',
                 year_published=date(2013,1,1))
         self.testbook1 = testbook1
 
@@ -31,7 +31,7 @@ class BookFromDictTestCase(TestCase):
         self.testbook2 = testbook2
 
         testbook3 = Book.objects.create(
-                title='Test 3', 
+                title='Test 3',
                 sortkey='Author 3a, Author 3b')
         testbook3.authors.add(Author.objects.create(name="Author 3a"))
         testbook3.authors.add(Author.objects.create(name="Author 3b"))
@@ -46,37 +46,37 @@ class BookFromDictTestCase(TestCase):
     def test_assertBook_from_dict_EqualYear(self):
         book = {
                 'title': 'Test 1',
-                'sortkey': 'Author 1', 
+                'sortkey': 'Author 1',
                 'year': 2013,
         }
         newbook = Book.from_dict(book)
         self.assertEqual(diff_books(self.testbook1, newbook), {})
-            
+
     def test_assertBook_from_dict_EqualNoYear(self):
         book = {
                 'title': 'Test 2',
-                'sortkey': 'Author 2', 
+                'sortkey': 'Author 2',
         }
         newbook = Book.from_dict(book)
         self.assertEqual(diff_books(self.testbook2, newbook), {})
-            
+
     def test_assertBook_from_dict_AuthorsAndSortkey(self):
         book = {
                 'title': 'Test 3',
-                'sortkey': 'Author 3a, Author 3b', 
-                'authors': ('Author 3a', 'Author 3b'), 
+                'sortkey': 'Author 3a, Author 3b',
+                'authors': ('Author 3a', 'Author 3b'),
         }
         newbook = Book.from_dict(book)
         self.assertEqual(diff_books(self.testbook3, newbook), {})
-            
+
     def test_assertBook_from_dict_AuthorsNoSortkey(self):
         book = {
                 'title': 'Test 4',
-                'authors': ('Author 4a', 'Author 4b'), 
+                'authors': ('Author 4a', 'Author 4b'),
         }
         newbook = Book.from_dict(book)
         self.assertEqual(diff_books(self.testbook4, newbook), {})
-            
+
 class BookTestCase(TestCase):
 
     def setUp(self):

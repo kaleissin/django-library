@@ -67,9 +67,10 @@ clean:
 	rm -rf .coverage
 
 test: clean virtual_env_set
-	-$(PYTHON_BIN)/coverage run $(LOCALPATH)/manage.py test $(DJANGO_TEST_POSTFIX)
+	python runtests.py
 
 coverage: virtual_env_set
+	-$(PYTHON_BIN)/coverage run runtests.py $(DJANGO_TEST_POSTFIX)
 	$(PYTHON_BIN)/coverage html --include="$(LOCALPATH)/*" --omit="*/admin.py,*/test*"
 
 predeploy: test
