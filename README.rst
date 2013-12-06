@@ -30,16 +30,16 @@ pip: "pip install django-library". Then append "library" to your
 INSTALLED_APPS. The included templates look for a template "base.html",
 see the one in homelibrary/templates for an example.
 
-Run south to add tables:
+Run south to add tables::
 
     $ ./manage.py migrate library
 
 Test driving the example project
 ================================
 
-Download the entire "django-library" directory somehow, set up a
-virtualenv with django (not tested with Django 1.6 yet),
-activate the virtualenv and run:
+Set up a virtualenv with django (not tested with Django 1.6 yet),
+activate it; download the entire "django-library" directory somehow,
+then ``cd`` into the same directory as the Makefile and run::
 
     $ export SECRET_KEY='foo'
     $ make cmd CMD="migrate library"
